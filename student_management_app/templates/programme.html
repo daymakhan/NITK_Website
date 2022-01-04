@@ -1,0 +1,339 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- <link rel="stylesheet" href="{% static 'dist/css/academic.css' %}"> -->
+   <style>
+      *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+    font-family: "Century Gothic", sans-serif;
+ }
+ 
+ .navlist{
+    width: 100%;
+    position: fixed;
+    padding: 5px 10%;
+    background-color: #110e2bbb;
+    margin: 0 auto;
+ }
+ .navlist ul{
+    display: flex;
+    list-style: none;
+ }
+ .navlist ul li:first-child{
+    flex: 1;
+    color: #ffffff;
+ }
+ .navlist ul li h4{
+    font-family: serif;
+ }
+ .navlist ul a{
+    display: block;
+    margin-left: 20px;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 0.9rem;
+    color: white;
+    text-decoration: none;
+ }
+ .navlist ul a:hover{
+    color: #ff8800;
+ }
+ 
+ 
+ 
+ .main-box{
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(#000000bb, #000000bb), url("{% static 'images/img2.png' %}");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    padding-top: 30vh;
+    text-align: center;
+    font-size: 48px;
+font-weight: 700;
+text-transform: none;
+letter-spacing: 0px;
+color: #ffffff;
+ }
+ 
+ .main-box h4{
+    word-spacing: 8px;
+    margin-bottom: 15px;
+    font-family: serif;
+    padding: 400px 980px 700px 0;
+ }
+ 
+
+.menu-button {
+   /* padding: 15px; */
+   font-size: 0.9rem;
+}
+.right-menu{
+   position: relative;
+   display: inline-block;
+   float: right;
+}
+.dropdown-menu {
+   display: none;
+   position: absolute;
+   background-color: black;
+   min-width: 158px;
+   z-index: 1;
+}
+
+.dropdown-menu a:hover {
+   background-color:black;
+   color:white;
+}
+.right-menu:hover .dropdown-menu {
+   display: block;
+}
+.right-menu:hover .menu-button {
+   background-color: transparent;
+}
+.container{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 8px;
+ }
+ .text-col{
+     padding-top: 40px;
+     font-family: verdana;
+     color: gray;
+ }
+ .thumbnail{
+    display: block;
+    max-width: 100%;
+    height: auto;
+ }
+ .img-col{
+     padding: 0 50px 0 0;
+ }
+ img{
+     width: 200px;
+     height: 260px;
+     border-top-left-radius: 30px;
+     border-bottom-left-radius: 30px;
+     border-top-right-radius: 30px;
+     border-bottom-right-radius: 30px;
+ }
+ .img-col:hover{
+   box-shadow: 0 0 10px 0px rgba(0,0,0,0.2);
+ }
+ .programmes{
+   color: #ff8800;
+   text-align: center;
+   margin: 30px;
+   font-family: 'Arial Narrow Bold', sans-serif;
+   
+ }
+ .programmes h2::before, .programmes h2::after{
+   content: "-----";
+   letter-spacing: -5px;
+   font-weight: lighter;
+   margin: 0 20px 0 10px;
+}
+ 
+.row{
+   margin-top: 5%;
+   display: flex;
+   justify-content: space-between;
+   color:black;
+}
+p{
+   color: #777;
+   font-size: 14px;
+   font-weight: 300px;
+   line-height: 22px;
+   padding: 10px;
+   text-align: left;
+}
+b{
+   color: #777;
+   font-size: 14px;
+   font-weight: 300px;
+   line-height: 22px;
+   padding: 10px;
+   text-align: left;
+}
+li{
+   text-align: justify;
+   color: #777;
+   font-size: smaller;
+}
+.programmes-col{
+   flex-basis: 31%;
+   background: #fff3f3;
+   border-radius: 30px;
+   margin-bottom: 5%;
+   margin-left: 0.5%;
+   padding: 20px 40px;
+   box-sizing: border-box;
+   transition: 0.5s;
+}
+h3{
+   text-align: center;
+   font-weight: 600;
+   margin: 10px 0;
+}
+h2{
+   color: #ff8800;
+}
+.programmes-col:hover{
+   box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+@media(max-width: 700px){
+   .row{
+      flex-direction: column;
+   }
+}
+.pdfs{
+   padding: 20px;
+}
+.pdf{
+   width: 100%;
+   height: 620px;
+}
+   </style>
+   <link rel="stylesheet" href="../all.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- <meta name="author" content="Suraj Kupate"> -->
+   <title>NITK</title>
+</head>
+<body>
+   <nav class="navlist">
+      <ul>
+         <li><h4><span>&#128222;</span> 0824 247 4000 </h4></li>
+         <li><a href="/">Home&nbsp;&nbsp;</a></li>
+         <!-- <li><a href="./Login/login.html">Login&nbsp;&nbsp;&nbsp;</a></li> -->
+         <div class="right-menu">
+            <li class="menu-button"> Login&nbsp;&nbsp;</a></li>
+            <div class = "dropdown-menu">
+               <a href="/login">Student Login</a>
+               <a href="/registration">Registration</a>
+            </div>
+         </div>
+         <div class="right-menu">
+            <li class="menu-button"> Academics</a></li>
+            <div class = "dropdown-menu">
+               <a href="/academic">Academic Office</a>
+               <a href="/programme">Programmes</a>
+               <a href="/curriculum">Regulations and Curriculums</a>
+            </div>
+         </div>
+         <li><a href="/contact">Contact Us&nbsp;&nbsp;</a></li>
+         <div class="right-menu">
+            <li class="menu-button"><a href="">Student Life</a></li>
+            <div class = "dropdown-menu">
+               <a href="/StudentCouncil">Students' Council</a>
+               <a href="/activities">Activities</a>
+               <a href="/Sports">Sports and Games</a>
+            </div>
+         </div>
+         
+         
+      </ul>
+   </nav>
+   <div class="main-box">
+      <h4>Programmes</h4> 
+   </div>
+   <br><br>
+   <section class="programmes">
+   <h2>Academic Programmes</h2>
+
+   <div class="row">
+       <div class="programmes-col">
+           <h3>PG Programmes</h3>
+           <p>
+            <b>M.Tech Programmes</b>
+           
+            <ol>
+                <li>Water Resources and Ocean Engineering </li>
+                <li>Chemical Engineering</li>
+                <li>Civil Engineering</li>
+                <li>Computer Science & Engineering</li>
+                <li>Electrical and Electronics Engineering</li>
+                <li>Electronics and Communication Engineering</li>
+                <li>Information Technology</li>
+                <li>Mathematical and Computational Sciences</li>
+                <li>Mechanical Engineering</li>
+                <li>Metallurgical and Materials Engineering</li>
+            </ol>
+            <br>
+            <b>MCA (Master of Computer Applications)</b><br>
+            <b>MBA (Master of Business Administration)</b><br>
+            <b>M.Sc. (Chemistry)</b><br>
+            <b>M.Sc. (Physics)</b>
+           </p>
+           
+       </div>
+
+       <div class="programmes-col">
+        <h3>UG Programmes</h3>
+        <p>
+         <b>B.Tech Programmes</b>
+         <ol>
+            <li>Chemical Engineering </li>
+            <li>Civil Engineering</li>
+            <li>Computer Science and Engineering</li>
+            <li>Electrical and Electronics Engineering</li>
+            <li>Electronics and Communication Engineering</li>
+            <li>Information Technology</li>
+            <li>Mechanical Engineering </li>
+            <li>Metallurgical and Materials Engineering</li>
+            <li>Mining Engineering</li>
+        </ol>
+        </p>
+    </div>
+
+    <div class="programmes-col">
+        <h3>PhD Research Programmes</h3>
+        <p>
+         <b>PhD Research</b><br>
+         Doctoral programmes at NITK are offered in 14 Departments under various research areas and interdisciplinary streams, 
+         under the following categories. Full-time students on Institute Scholarship Full-time sponsored students under QIP Full-time / 
+         External Registrants - sponsored from Industry or other organizations including Educational Institutions Internal Registrants - 
+         sponsored institute of project staff of NITK<br>
+         <ol>
+            <li>Full-time students on Institute Scholarship</li>
+            <li>Full-time sponsored students under QIP</li>
+            <li>Full-time / External Registrants - sponsored from Industry or other organizations including Educational Institutions</li>
+            <li>Internal Registrants - sponsored institute of project staff of NITK</li>
+         </ol>
+        </p>
+    </div>
+
+    <div class="programmes-col">
+        <h3>M.Tech Research Programmes</h3>
+        <p>
+         <b>M.Tech Research</b>
+         <ol>
+            <li>Department of Chemical Engineering </li>
+            <li>Department of Civil Engg.</li>
+            <li>Department of Computer Science and Engg.</li>
+            <li>Department of Electrical & Electronics Engg.</li>
+            <li>Department of Electronics & Communication Engg.</li>
+            <li>Department of Information Technology </li>
+            <li>Department of Mechanical Engg.</li>
+            <li>Department of Metallurgical & Materials Engg.</li>
+            <li>Department of Mining Engg.</li>
+            <li>Department of Mathematical & Computational Sciences</li>
+            <li>Department of Water Resources and Ocean Engg. </li>
+        </ol>
+        </p>
+    </div>
+   </div>
+   </section>
+   
+
+</body>
+
+</html>
